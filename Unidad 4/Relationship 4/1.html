@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta chrset="UTF-8">
+    <link>
+    <tytle>Probando cookies</title>
+    <script>
+        function setCookie(identificador, valor, fechaExpiracion) {
+            document.cookie = identificador + "=" + valor + ";" + fechaExpiracion + ";path=/";
+            comprobarCookie();
+        }
+
+
+        function color(){
+            var parrafo
+            var parrafo = document.getElementById("parrafo");
+            console.log(parrafo.style.color);
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function comprobarCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Bienvenido " + user);
+            } else {
+                user = prompt("Porfavor introduzca su nombre:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 365);
+                }
+            }
+        }
+        function borrar(){
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+
+
+
+        comprobarCookie();
+        color();
+
+    </script>
+</head>
+
+<body>
+
+<p id="parrafo" style="background-color:red">
+    <A href="#" onclick="borrar()">Cerrar sesion</A>
+</p>
+
+</body>
+
+</html>

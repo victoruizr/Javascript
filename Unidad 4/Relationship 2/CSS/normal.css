@@ -1,0 +1,24 @@
+body
+{
+    background-color:blue;
+}
+
+#links
+{
+    background-color:blueviolet;
+}
+
+#informacion
+{
+    background-color:#FFFF5F;
+}
+
+#negrita
+{
+  font-weight: bold;  
+}
+#marco
+{
+    border:1px;
+    background-color: #888904 ;
+}

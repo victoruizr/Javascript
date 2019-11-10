@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de prueba de HTML5</title>
+    <meta charset="UTF-8">
+    <script>
+    function añadir(){
+        var boton=document.createElement("input");
+        boton.type="button"
+        boton.value="Adjuntar otro fichero";
+        document.body.appendChild(boton);
+    }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="file" value="Adjuntar otro fichero">
+    <input type="button" onclick="añadir()" value="Enviar">
+
+</body>
+
+</html>

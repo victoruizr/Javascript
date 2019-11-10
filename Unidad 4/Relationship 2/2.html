@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta chrset="UTF-8">
+    <link id="stylesheet" rel="stylesheet" href="CSS/normal.css">
+    <tytle>Cambiando css</tytle>
+    <script>
+        function setStyleSheet(url)
+        {
+            var stylesheet = document.getElementById("stylesheet");
+            stylesheet.setAttribute('href', url);
+        }
+
+
+    </script>
+</head>
+
+<body id="cuerpo">
+    <section id="informacion">
+        <p id="links">
+            <A href="#" onclick="setStyleSheet('CSS/normal.css')" id="normal">Tema normal</A>
+            <A href="#" onclick="setStyleSheet('CSS/minimalista.css')" id="normal">Tema minimalista</A>
+
+        </p>
+
+
+        <p>
+        <h1>Página de ejemplo</h1>
+        En esta pagina vamos a comprobar lo fácil que es aplicar estilos mediante CSS a un<br>
+        documento seleccionado.<br><br>
+        </p>
+
+        <p>
+        Lo ideal es que al seleccionar un estilo éste permanezca siempre igual para el <br>
+        usuario. Hasta ahora no vemos como hacerlo, ¿se te ocurre como podremos<br>
+        hacerlo?
+        </p>
+
+        <p>
+        Utilizando CSS podemos incluso ocultar partes del sitio. <br>
+        </p>
+        <p  id="negrita">
+        Este parrafo debe ser solo visible en el tema Normal<br>
+        </p>
+
+        <section id="marco">
+            Esto esta dentro de un marco
+        </section>
+    </section>
+</body>
+</html>

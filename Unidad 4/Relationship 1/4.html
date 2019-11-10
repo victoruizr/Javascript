@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Ejercicio 1</title>
+        <script>
+            //En el momento en el que la web se haya cargado ejecuta esto (Crea una tabla de 100 * 100)
+            window.onload = function(){
+                document.write("<table >")
+                for(i=0;i<100;i++){
+                    document.write("<tr>")
+                    for(j=0;j<100;j++){
+                        document.write("<td onmouseover='color(event)'>");
+                    }
+                    document.write("</td>");
+                }
+                document.write("</table>");
+            }
+
+            //Cuando se clique en control pintara un color y en alt otro sino se clica ningun se pondra en blanco
+            function color(evento){
+                //evento.target.style.background="#cc0000";
+                if(evento.altKey==true){
+                    evento.target.style.background="red"; 
+                }
+                else if (evento.ctrlKey==true){
+                    evento.target.style.background="blue"; 
+                }
+                else if (evento.shiftKey==true){
+                    evento.target.style.background="white"; 
+                }
+                else{
+                    evento.target.style.background="white"; 
+                }
+                
+            }
+
+
+        </script>
+    </head>
+<body>
+
+</body>
+</html>

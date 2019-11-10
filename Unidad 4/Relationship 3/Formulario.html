@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comprobando campos de formulario</title>
+
+    <script>
+        function comprobarNombre() {
+            var $usuario = document.getElementById("nombre").value;
+            var $comprobacion = /^[a-zA-Z]+$/;
+            if ($usuario != "") {
+                if ($usuario.match($comprobacion)) {
+                    document.getElementById("nombre").style.backgroundColor = "green";
+                }
+                else {
+                    document.getElementById("nombre").style.backgroundColor = "red";
+                }
+            }
+        }
+        function comprobarApellido() {
+            var $usuario = document.getElementById("apellido").value;
+            var $comprobacion = /^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']+[\s])+([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])+[\s]?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$/g
+            if ($usuario != "") {
+                if ($usuario.match($comprobacion)) {
+                    document.getElementById("apellido").style.backgroundColor = "green";
+                }
+                else {
+                    document.getElementById("apellido").style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function comprobarTelefono() {
+            var $usuario = document.getElementById("telefono").value;
+            var $comprobacion = /^[0-9]{8}$/;
+            if ($usuario != "") {
+                if ($usuario.match($comprobacion)) {
+                    document.getElementById("telefono").style.backgroundColor = "green";
+                }
+                else {
+                    document.getElementById("telefono").style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function comprobarDni() {
+            var $usuario = document.getElementById("dni").value;
+            var $comprobacion = /[0-9]{8,8}[A-Za-z]$/
+            if ($usuario != "") {
+                if ($usuario.match($comprobacion)) {
+                    document.getElementById("dni").style.backgroundColor = "green";
+                }
+                else {
+                    document.getElementById("dni").style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function comprobarEmail() {
+            var $usuario = document.getElementById("email").value;
+            var $comprobacion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            if ($usuario != "") {
+                if ($usuario.match($comprobacion)) {
+                    document.getElementById("email").style.backgroundColor = "green";
+                }
+                else {
+                    document.getElementById("email").style.backgroundColor = "red";
+                }
+            }
+        }
+        function comprobarnombreUsuario() {
+            var $usuario = document.getElementById("nUsuario").value;
+            var $comprobacion = /^[a-zA-Z]+$/;           
+            if ($usuario != "") {
+                if ($usuario.match($comprobacion)) {
+                    document.getElementById("nUsuario").style.backgroundColor = "green";
+                }
+                else {
+                    document.getElementById("nUsuario").style.backgroundColor = "red";
+                }
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Comprobando campos</h1>
+    <form id="form">
+        Nombre :<input onkeyup="comprobarNombre()" type="Text" id="nombre"><br>
+        Apellidos :<input onkeyup="comprobarApellido()" type="Text" name="apellido" id="apellido"><br>
+        Telefono :<input onkeyup="comprobarTelefono()" type="Text" name="telefono" id="telefono"><br>
+        DNI :<input onkeyup="comprobarDni()" type="Text" name="dni" id="dni"><br>
+        Email :<input onkeyup="comprobarEmail()" type="Text" name="email" id="email"><br>
+        Nombre usuario :<input onkeyup="comprobarnombreUsuario()" type="Text" name="nUsuario" id="nUsuario"><br>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta chrset="UTF-8">
+    <link>
+    <tytle>Probando cookies</title>
+    <script>
+        function crearCookie(identificador, valor, fechaExpiracion) {
+              document.cookie = identificador + "=" + valor + ";" + fechaExpiracion + ";path=/";
+        }
+
+        function leerCookie(identificador) {
+            alert(document.cookie);
+            var name = identificador + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+ 
+    </script>
+</head>
+
+<body>
+    <input TYPE="button" VALUE="Crear" onclick="crearCookie('username','victor','Sat, 2 Nov 2018 19:00:00 UTC')">
+    <input TYPE="button" VALUE="Mostrar" onclick="leerCookie('username')">
+    <input TYPE="button" VALUE="Borrar" onclick="borrar()">    
+</body>
+
+</html>

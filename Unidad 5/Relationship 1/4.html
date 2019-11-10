@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de prueba de HTML5</title>
+    <meta charset="UTF-8">
+    <script>
+    function añadir(){
+        var li = document.createElement('li');
+        var ul = document.getElementById("lista");
+        li.innerHTML="Elemento";
+        ul.appendChild(li);
+    }
+
+    </script>
+</head>
+
+<body>
+
+    <ul id="lista">
+        <li>Elemento</li>
+    </ul>
+
+    <input type="button" onclick="añadir()" value="Añadir">
+
+</body>
+
+</html>

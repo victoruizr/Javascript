@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Obtener Coordenadas actuales</title>
+<meta charset="utf-8" />
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfkeGMFbgvQovUT_YJcdrRTrJPa9gRsK4"></script>
+<script>
+function initMap() {
+ navigator.geolocation.getCurrentPosition(function(pos) { 
+   // Creamos un objeto mapa y lo situamos en coordenadas actuales
+  var currentLatitude=pos.coords.latitude;
+  var currentLongitude=pos.coords.longitude;  
+  var map = new google.maps.Map(document.getElementById("mapa"),
+  {
+    center: {lat:currentLatitude, lng:currentLongitude},
+    scrollwheel: false,
+    zoom: 13
+   }
+  );
+   //marcador que muestra ubicacion
+ var marker = new google.maps.Marker({
+   position:{ lat: currentLatitude, lng:currentLongitude},
+   animation: google.maps.Animation.DROP,
+  });
+ marker.setMap(map);
+//Ahora se procedera a calcular la distancia que ahi entre dos puntos por defecto
+
+var origin1 = new google.maps.LatLng(55.930385, -3.118425);
+var origin2 = 'Greenwich, England';
+var destinationA = 'Stockholm, Sweden';
+var destinationB = new google.maps.LatLng(50.087692, 14.421150);
+
+var service = new google.maps.DistanceMatrixService();
+service.getDistanceMatrix(
+  {
+    origins: [origin1, origin2],
+    destinations: [destinationA, destinationB],
+    travelMode: 'DRIVING',
+    unitSystem: google.maps.UnitSystem.METRIC,
+    avoidHighways: true,
+    avoidTolls: true,
+  }, callback);
+
+function callback(response, status) {
+  // See Parsing the Results for
+  // the basics of a callback function.
+  console.log(response);
+}
+})};
+</script>
+</head>
+<body onload="initMap()">
+ <h1>Obtener coordenadas Actuales</h1>
+ <div id="mapa" style="width: 450px; height: 350px;"> </div>
+</body>
+</html>

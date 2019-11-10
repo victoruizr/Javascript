@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de prueba de HTML5</title>
+    <meta charset="UTF-8">
+    <script>
+        var i = 0;
+        //Creamos el array
+        //Creamos el array
+        function crearArray() {
+            var imagenes = [
+                "./Imagenes/0.jpg",
+                "./Imagenes/1.jpg",
+                "./Imagenes/2.jpg",
+                "./Imagenes/3.jpg",
+                "./Imagenes/4.jpg"
+            ];
+            return imagenes;
+        }
+
+        //Mostramos la imagen de inicio
+        function imagenInicio() {
+            var numero = crearArray();
+            var ima = document.createElement("img");
+            ima.src = numero[0];
+            ima.id = "image"+i;
+            document.body.appendChild(ima);
+        }
+
+
+        //borrar imagen
+/*         function borrar() {
+            var image_x = document.getElementById('image'+i);
+            image_x.parentNode.removeChild(image_x);
+        }  */
+
+        //avanza las imagenes
+        function avanzar() {
+            var num = crearArray();
+/*             borrar(); */
+            if (i == num.length - 1) {
+                i = 0;
+                var ima = document.createElement("img");
+                ima.src = num[i];
+                ima.id = "image" + i;
+                document.body.appendChild(ima);
+            } else {
+                i++;
+                var ima = document.createElement("img");
+                ima.src = num[i];
+                ima.id = "image" + i;
+                document.body.appendChild(ima);
+            }
+        }
+
+        function retroceder() {
+            var num = crearArray();
+/*             borrar(); */
+            if (i == 0) {
+                i = num.length - 1;
+                var ima = document.createElement("img");
+                ima.src = num[i];
+                ima.id = "image";
+                document.body.appendChild(ima);
+                i--;
+            } else {
+                var ima = document.createElement("img");
+                ima.src = num[i];
+                ima.id = "image" + i;
+                console.log(ima);
+                document.body.appendChild(ima);
+                i--;
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="imagenInicio()">
+    <div>
+
+    </div>
+    <input type="button" value="Siguiente" id="siguiente" onclick="avanzar()">
+    <input type="button" value="Anterior" id="anterior" onclick="retroceder()">
+
+</body>
+
+</html>

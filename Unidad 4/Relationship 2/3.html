@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta chrset="UTF-8">
+    <title>Aumentando tamano y justifacion de texto</title>
+    <script>
+        function aumentar() {
+            var $contador = 0;
+            while ($contador < 5) {
+                var $parrafo = document.getElementsByTagName("p")[$contador];
+                var $tamano = window.getComputedStyle($parrafo, null).getPropertyValue('font-size');
+                var $fontSize = parseFloat($tamano);
+                $parrafo.style.fontSize = ($fontSize + 1) + 'px';
+                $contador++;
+            }
+        }
+
+        function disminuir() {
+            var $contador = 0;
+            while ($contador < 5) {
+                var $parrafo = document.getElementsByTagName("p")[$contador];
+                var $tamano = window.getComputedStyle($parrafo, null).getPropertyValue('font-size');
+                var $fontSize = parseFloat($tamano);
+                $parrafo.style.fontSize = ($fontSize - 1) + 'px';
+                $contador++;
+            }
+        }
+
+        function justificada() {
+            var $contador = 0;
+            while ($contador < 5) {
+                document.getElementsByTagName("p")[$contador].align = "justify";
+                $contador++;
+            }
+        }
+
+        function izquierda() {
+            var $contador = 0;
+            while ($contador < 5) {
+                document.getElementsByTagName("p")[$contador].align = "left";
+                $contador++;
+            }
+        }
+
+        function derecha() {
+            var $contador = 0;
+            while ($contador < 5) {
+                document.getElementsByTagName("p")[$contador].align = "right";
+                $contador++;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Aumentando tamaño y justifacion de texto</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus quis posuere purus. Phasellus ac metus ac est varius dignissim.
+            Vivamus sem augue, porttitor at nisl ut, ornare efficitur ipsum.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Morbi dictum ante et bibendum ornare.
+            Duis tristique elit a tincidunt mollis.
+            Mauris vel egestas augue, mattis dignissim arcu.
+            Aliquam tortor ligula, tempus eu luctus ac, lacinia ac metus.
+            In non efficitur ex. Fusce in volutpat mauris.
+            Etiam pulvinar lectus at ex dictum, eu ultrices metus hendrerit.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Aenean porta a purus quis condimentum.
+            Nam tortor dolor, bibendum id quam eget, porta consequat velit.
+            Proin sed sodales felis.
+            Nunc magna nisi, rutrum et vulputate a, posuere hendrerit felis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus quis posuere purus. Phasellus ac metus ac est varius dignissim.
+            Vivamus sem augue, porttitor at nisl ut, ornare efficitur ipsum.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Morbi dictum ante et bibendum ornare.
+            Duis tristique elit a tincidunt mollis.
+            Mauris vel egestas augue, mattis dignissim arcu.
+            Aliquam tortor ligula, tempus eu luctus ac, lacinia ac metus.
+            In non efficitur ex. Fusce in volutpat mauris.
+            Etiam pulvinar lectus at ex dictum, eu ultrices metus hendrerit.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Aenean porta a purus quis condimentum.
+            Nam tortor dolor, bibendum id quam eget, porta consequat velit.
+            Proin sed sodales felis.
+            Nunc magna nisi, rutrum et vulputate a, posuere hendrerit felis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus quis posuere purus. Phasellus ac metus ac est varius dignissim.
+            Vivamus sem augue, porttitor at nisl ut, ornare efficitur ipsum.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Morbi dictum ante et bibendum ornare.
+            Duis tristique elit a tincidunt mollis.
+            Mauris vel egestas augue, mattis dignissim arcu.
+            Aliquam tortor ligula, tempus eu luctus ac, lacinia ac metus.
+            In non efficitur ex. Fusce in volutpat mauris.
+            Etiam pulvinar lectus at ex dictum, eu ultrices metus hendrerit.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Aenean porta a purus quis condimentum.
+            Nam tortor dolor, bibendum id quam eget, porta consequat velit.
+            Proin sed sodales felis.
+            Nunc magna nisi, rutrum et vulputate a, posuere hendrerit felis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus quis posuere purus. Phasellus ac metus ac est varius dignissim.
+            Vivamus sem augue, porttitor at nisl ut, ornare efficitur ipsum.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Morbi dictum ante et bibendum ornare.
+            Duis tristique elit a tincidunt mollis.
+            Mauris vel egestas augue, mattis dignissim arcu.
+            Aliquam tortor ligula, tempus eu luctus ac, lacinia ac metus.
+            In non efficitur ex. Fusce in volutpat mauris.
+            Etiam pulvinar lectus at ex dictum, eu ultrices metus hendrerit.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Aenean porta a purus quis condimentum.
+            Nam tortor dolor, bibendum id quam eget, porta consequat velit.
+            Proin sed sodales felis.
+            Nunc magna nisi, rutrum et vulputate a, posuere hendrerit felis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus quis posuere purus. Phasellus ac metus ac est varius dignissim.
+            Vivamus sem augue, porttitor at nisl ut, ornare efficitur ipsum.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Morbi dictum ante et bibendum ornare.
+            Duis tristique elit a tincidunt mollis.
+            Mauris vel egestas augue, mattis dignissim arcu.
+            Aliquam tortor ligula, tempus eu luctus ac, lacinia ac metus.
+            In non efficitur ex. Fusce in volutpat mauris.
+            Etiam pulvinar lectus at ex dictum, eu ultrices metus hendrerit.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Aenean porta a purus quis condimentum.
+            Nam tortor dolor, bibendum id quam eget, porta consequat velit.
+            Proin sed sodales felis.
+            Nunc magna nisi, rutrum et vulputate a, posuere hendrerit felis.
+        </p>
+    <input type="button" value="Aumentar letra" onclick="aumentar()">
+    <input type="button" value="Disminuir letra" onclick="disminuir()">
+    <input type="button" value="Alinear izquierda" onclick="izquierda()">
+    <input type="button" value="Alinear justificado" onclick="justificada()">
+    <input type="button" value="Alinear derecha" onclick="derecha()">
+
+</body>
+
+</html>

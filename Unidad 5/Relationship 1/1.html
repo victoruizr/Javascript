@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de prueba de HTML5</title>
+    <meta charset="UTF-8">
+    <script>
+        window.onload = function () {
+            var info = document.getElementById("informacion");
+
+            // Numero de enlaces de la pagina
+            var enlaces = document.getElementsByTagName("a");
+            console.log(enlaces);
+
+            // Direccion del penultimo enlace
+            var mensaje = "El penultimo enlace apunta a: " + enlaces[enlaces.length - 2].href;
+            console.log(mensaje);
+
+            // Numero de enlaces que apuntan a http://prueba
+            var contador = 0;
+            for (var i = 0; i < enlaces.length; i++) {
+                // Es necesario comprobar los enlaces http://prueba y
+                // http://prueba/ por las diferencias entre navegadores
+                if (enlaces[i].href == "http://www.google.es/") {
+                    contador++;
+                }
+            } console.log(contador);
+
+            // Numero de enlaces del tercer párrafo
+            var parrafos = document.getElementsByTagName("p");
+            enlaces = parrafos[2].getElementsByTagName("a");
+            console.log(enlaces);
+        }
+
+    </script>
+</head>
+
+<body>
+    <p>
+        <a href="" class="link">a</a>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+    </p>
+    <p>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+    </p>
+    <p>
+        <a class="link" href="http://www.google.es/">a</a>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+        <a class="link" href="">a</a>
+    </p>
+</body>
+
+</html>
