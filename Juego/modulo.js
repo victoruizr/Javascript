@@ -7,7 +7,8 @@ export class tresEnRaya{
         this.jugador = 1;
     };
 
-    //Con esta funcion rellenamos la celda correspondiente y decimos si le toca al usuario 1 o 2
+    //Con esta funcion rellenamos la celda correspondiente y decimos si le toca al usuario 1 o 2 y en a esta le añadiremos un numero para saber
+    //si es del jugador 1 o 2
     rellenarCelda(celda){
         if(this.tablero[celda]==0){
             if(this.jugador==1){
@@ -22,11 +23,6 @@ export class tresEnRaya{
         }
     return this.jugador;
 };
-
-    inicializarTablero(){
-        a.tablero=[0, 0, 0, 0, 0, 0, 0, 0, 0];
-        a.jugador=0;
-    }
 
         //En esta funcion comprobamos los espacios 
         ganador(){
@@ -45,7 +41,7 @@ export class tresEnRaya{
         //Las diagonales
             if(this.tablero[0] == this.tablero[4] && this.tablero[4] == this.tablero[8] && this.tablero[0] !=0) return this.tablero[0];
             if(this.tablero[2] == this.tablero[4] && this.tablero[4] == this.tablero[6] && this.tablero[2] !=0) return this.tablero[2];
-        
+        //En caso de que este completo  de tres casilla nos retornara 3
             if (numEspacios > 0){
             return 0;
             } else {

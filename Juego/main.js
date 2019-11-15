@@ -39,7 +39,7 @@ function crearTablero() {
     botones();
 }
 
-
+//Con esta funcion inicializamos todo 
 function inicializar() {
 
     for (var filas = 0; filas <= 8; filas++) {
@@ -51,6 +51,7 @@ function inicializar() {
     }
 }
 
+//Bloqueamos las celdas
 function bloquear() {
     for (let i = 0; i <= 8; i++) {
         var td = document.getElementsByTagName("td")[i];
@@ -58,7 +59,7 @@ function bloquear() {
     }
 }
 
-
+//Comprobamos el ganador
 function comprobarGanador() {
     var win = a.ganador();
     if (win == 1) {
@@ -70,6 +71,7 @@ function comprobarGanador() {
     }
 }
 
+//Funcion que se haar cuando se haga click en cada td
 function Clickar(e) {
     var z = event.target.id;
     a.rellenarCelda(z);
@@ -88,6 +90,7 @@ function Clickar(e) {
         fila.appendChild(imag);
     }
 }
+
 crearTablero();
 
 
