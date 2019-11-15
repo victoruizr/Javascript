@@ -1,5 +1,6 @@
+
 body{
-    background-image: linear-gradient(to right top,#5AFF07  0%, #F8FF8C  , #07FF96 );
+    background-image: linear-gradient(to top,red  0%, #F8FF8C  , red );
     background-repeat: repeat-x;
     max-width: 100%;
     max-height: 100%;
@@ -14,7 +15,7 @@ td{
     height: 15em;
     text-align: center;
     border:2px solid;
-    border-color: darkgreen;
+    border-color: red;
     border-spacing : 0 0;
     padding : 0 0 0 0;
     border-radius:20px;
@@ -31,22 +32,39 @@ table{
 }
 
 td:hover{
-    background-color: chartreuse;
+    background-color: #FC1B00;   
 }
 
 
 
 #titulo{
-    text-align: center;
-    font-style: italic;
-    font-size: 50px;
+    WIDTH:20%;
+    font-size: 85px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
 }
 
 
 #reiniciar{
-    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
-  background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
-  background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
-  background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
-  background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+    background-image: -webkit-linear-gradient(top,red  0%, #F8FF8C  , red);
+    color:red;
+    font-style: oblique;
+    margin-left: 48%;
+    width: 100px;
+    height: 65px;
+    font-size: 20px;
+    font-style: bold;
 }
+
+#x{
+    width: 95%;
+    height: 95%;
+}
+
+#y{
+    width: 95%;
+    height: 95%;
+}
+
+
+

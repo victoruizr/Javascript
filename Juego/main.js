@@ -10,12 +10,6 @@ function botones() {
     boton.id = "reiniciar";
     boton.addEventListener("click", inicializar);
     document.body.appendChild(boton);
-
-    var boton = document.createElement("button");
-    boton.innerHTML = "salir";
-    boton.id = "salir";
-    boton.addEventListener("click", salir);
-    document.body.appendChild(boton);
 }
 
 
@@ -39,7 +33,7 @@ function crearTablero() {
     botones();
 }
 
-//Con esta funcion inicializamos todo 
+//Con esta funcion inicializamos "limpiamos todo"
 function inicializar() {
 
     for (var filas = 0; filas <= 8; filas++) {
